@@ -54,7 +54,7 @@ namespace AntiCrack_DotNet
         private static void ExecuteAntiDebuggingTricks()
         {
             Console.WriteLine("----------------------------------Executing Anti Debugging Tricks-------------------------------------------------------");
-            DisplayCheckResult("GetForegroundWindow (Looking For Bad Active Debugger Windows): ", AntiDebug.GetForegroundWindowAntiDebug());
+            DisplayCheckResult("GetForegroundWindow (Looking For Bad Active Debugger Window): ", AntiDebug.GetForegroundWindowAntiDebug());
             DisplayCheckResult("Debugger.IsAttached: ", AntiDebug.DebuggerIsAttached());
             DisplayCheckResult("Hide Threads From Debugger..... ", AntiDebug.HideThreadsAntiDebug());
             DisplayCheckResult("IsDebuggerPresent: ", AntiDebug.IsDebuggerPresentCheck());
@@ -109,15 +109,16 @@ namespace AntiCrack_DotNet
         private static void ExecuteOtherDetectionTricks()
         {
             Console.WriteLine("----------------------------------Executing Other Detection Tricks-----------------------------------------------------\n");
-            DisplayCheckResult("Detecting if Unsigned Drivers are allowed to load: ", OtherChecks.IsUnsignedDriversAllowed());
-            DisplayCheckResult("Detecting if Test-Signed Drivers are allowed to load: ", OtherChecks.IsTestSignedDriversAllowed());
+            DisplayCheckResult("Detecting if Unsigned Drivers are Allowed to Load: ", OtherChecks.IsUnsignedDriversAllowed());
+            DisplayCheckResult("Detecting if Test-Signed Drivers are Allowed to Load: ", OtherChecks.IsTestSignedDriversAllowed());
+            DisplayCheckResult("Detecting if Kernel Debugging are Enabled on the System: ", OtherChecks.IsKernelDebuggingEnabled());
             Console.WriteLine("------------------------------------------------------------------------------------------------------------------------\n\n");
         }
 
         private static void ExecuteHooksDetectionTricks()
         {
             Console.WriteLine("----------------------------------Executing Hooks Detection Tricks------------------------------------------------------");
-            DisplayCheckResult("Detecting Most Anti Anti-Debugging Hooking Methods on Common Anti-Debugging Functions by checking for JMP and NOP Instructions on Functions Addresses (Most Effective on x64): ", HooksDetection.DetectBadInstructionsOnCommonAntiDebuggingFunctions());
+            DisplayCheckResult("Detecting Most Anti Anti-Debugging Hooking Methods on Common Anti-Debugging Functions by checking for Bad Instructions on Functions Addresses (Most Effective on x64): ", HooksDetection.DetectBadInstructionsOnCommonAntiDebuggingFunctions());
             Console.WriteLine("------------------------------------------------------------------------------------------------------------------------\n\n");
         }
 

@@ -38,6 +38,7 @@ namespace AntiCrack_DotNet
         {
             [FieldOffset(0)]
             public ulong Length;
+
             [FieldOffset(4)]
             public uint CodeIntegrityOptions;
         }
@@ -51,6 +52,31 @@ namespace AntiCrack_DotNet
             internal IntPtr Reserved2_1;
             internal IntPtr UniqueProcessId;
             internal IntPtr InheritedFromUniqueProcessId;
+        }
+
+        [StructLayout(LayoutKind.Sequential)]
+        public struct SYSTEM_KERNEL_DEBUGGER_INFORMATION
+        {
+            [MarshalAs(UnmanagedType.U1)]
+            public bool KernelDebuggerEnabled;
+
+            [MarshalAs(UnmanagedType.U1)]
+            public bool KernelDebuggerNotPresent;
+        }
+
+        [StructLayout(LayoutKind.Sequential)]
+        public struct UNICODE_STRING
+        {
+            public ushort Length;
+            public ushort MaximumLength;
+            public IntPtr Buffer;
+        }
+
+        public struct ANSI_STRING
+        {
+            public short Length;
+            public short MaximumLength;
+            public string Buffer;
         }
     }
 }
