@@ -1,5 +1,5 @@
 # AntiCrack DotNet
-A C# Project which Contains the Most Advanced Anti-Cracking Methods Ever Made in C#.
+A C# Project which Contains the Most Advanced Anti-Cracking Methods Ever Made in C#, Contributions are welcome. (also feel free to open an issue for adding additional anti-debugging features, etc)
 
 <img width="960" alt="AntiCrackDotNet_1 2" src="https://user-images.githubusercontent.com/90452585/180578537-d3817dc7-6398-4c3b-b7aa-a46d6a604d45.PNG">
 
@@ -76,7 +76,7 @@ A C# Project which Contains the Most Advanced Anti-Cracking Methods Ever Made in
 * Detecting if Kernel Debugging are Enabled on the System
 
 ## Hooks Detection
-* Detecting Most Anti Anti-Debugging Hooking Methods on Common Anti-Debugging Functions by checking for Bad Instructions on Functions Addresses (Most Effective on x64)
+* Detecting Most Anti Anti-Debugging Hooking Methods on Common Anti-Debugging Functions by checking for Bad Instructions on Functions Addresses (Most Effective on x64), and it can also detect some sandboxes which uses hooking to monitor application behaviour/activity (like <a href="https://github.com/sandboxie-plus/Sandboxie">Sandboxie/Sandboxie Plus</a>, <a href="https://www.hybrid-analysis.com">Hybrid Analysis</a>, <a href="https://cuckoosandbox.org/">Cuckoo Sandbox</a>, and a lot of other online malware analysis websites/applications).
 
 # Notice
 This Project are created for educational purposes only, also this project are licensed under MIT License.
